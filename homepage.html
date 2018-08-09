@@ -1,0 +1,112 @@
+
+<html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<div class="divisao">	
+		<head>
+			<link rel="stylesheet" type="text/css" href="css.css">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>Piratas da ETEC</title>       
+		</head>
+
+		<body>
+			
+				<div class="header">
+					<img src="piratas_da_etec.png">
+				</div>
+				<div class="menu">             
+						<a href="#"> Página Inicial </a> 
+						<a href="#"> Filmes e Séries </a> 
+						<a href="#"> Animes </a> 
+						<a href="#"> Mangás </a> 
+						<a href="#"> Doramas </a> 
+						<a href="#"> Livros </a>
+						<a href="#"> Torrents </a>
+						<a href="#"> Cadastre-se </a>
+						<a href="#"> Login </a>						
+				</div>
+				<div class="col-9 col-s-12">
+				<div class="contents">
+					<div class="boasvindas">
+						Boas-vindas ao Piratas da ETEC
+					</div>
+					<div class="subtitulo">
+						O maior acervo de compartilhamento de arquivos da ETEC
+					</div>
+					<div class="texto">
+						Esse é um teste
+					</div>
+					<div class="destaques">
+					
+					</div>
+				</div>
+				</div>
+				<div class="col-3 col-s-12">
+					<div class="menu2">
+						<button class="button" style="vertical-align:middle"><span><a href="#"><b>Upar um Arquivo</b></a></span>
+						<button class="button" style="vertical-align:middle"><span><a href="#"><b>Sobre Nós</b></a></span>
+						<button class="button" style="vertical-align:middle"><span><a href="#"><b>Reportar Bug</b></a></span>
+					</div>
+				</div>
+				<div class="col-12 col-s-12">
+					<div class="videos">
+						<center> Em destaque </center>
+					</div>
+					<div class="container-slide">
+					
+						<div class="slides fade">
+							<img src="anime.png" style="width:auto">
+							<div class="textinho"><a href="#"> Novos episódios </a></div>
+						</div>
+						
+						<div class="slides fade">
+							<img src="bolsonaro.jpg" style="width:auto">
+							<div class="textinho"><a href="#"> Novidades em livros </a></div>
+						</div>
+
+						<div class="slides fade">
+							<img src="fifa.jpg" style="width:auto">
+							<div class="textinho"><a href="#"> Os mais novos torrents </a></div>
+						</div>
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+							<div style="text-align:center">
+								<span class="dot" onclick="currentSlide(1)"></span> 
+								<span class="dot" onclick="currentSlide(2)"></span> 
+								<span class="dot" onclick="currentSlide(3)"></span> 
+							</div>
+					</div>
+				</div>
+				
+    </div>
+	<script>
+			var slideIndex = 1;
+		showSlides(slideIndex);
+
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("slides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1} 
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none"; 
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block"; 
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+	</body>
+</html>
